@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "gCGBKBgzTRghjKOy2S3El0FTXWcrBoaIJFy2FujZEm0=",
+  "Source": "ConwayApp.WebApi",
+  "BasePath": "_content/ConwayApp.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

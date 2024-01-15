@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+
+  mongogol:
+    container_name: mongogol
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+
+
+  conway-api:
+    container_name: conway-api
+    image: "conway-api"
+    ports:
+      - "8000:80"
+    depends_on:
+      - mongogol

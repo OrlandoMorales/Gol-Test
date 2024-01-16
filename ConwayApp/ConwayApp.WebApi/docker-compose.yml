@@ -1,18 +1,26 @@
-version: '3.8'
+version: '3'
 services:
 
   mongogol:
-    container_name: mongogol
     image: mongo
     restart: always
     ports:
-      - 27017:27017
+      - "27020:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: rootpassword
+    networks:
+      - gol-network
 
 
   conway-api:
-    container_name: conway-api
-    image: "conway-api"
+    build: .
     ports:
       - "8000:80"
     depends_on:
       - mongogol
+    networks:
+      - gol-network
+
+networks:
+  gol-network:
